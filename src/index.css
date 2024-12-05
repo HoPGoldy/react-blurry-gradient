@@ -2,3 +2,13 @@
 body {
   margin: 0;
 }
+
+.title {
+  color: white;
+  position: absolute;
+  top: 43vh;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+}

@@ -1,23 +1,40 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { BlurryGradient, COLORS } from './blurry-gradient';
 
-// const ITEMS = [
-//   { color: 'linear-gradient(#FBF1F7, #B27CEE)' },
-//   { color: 'linear-gradient(#E280AE, #c469ee)' },
-//   { color: 'linear-gradient(#a443ee, #e261bb)' },
-//   { color: 'linear-gradient(#e488ee, #FBF1F7)' },
-// ];
-
-// const COLORS = ['#FBF1F7', '#B27CEE', '#E280AE', '#c469ee', '#a443ee', '#e261bb', '#e488ee'];
+const COLOR_MAP = Object.values(COLORS);
 
 const App: FC = () => {
+  const [colorIndex, setColorIndex] = useState(0);
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setOpacity(0);
+      setTimeout(() => {
+        setColorIndex((prev) => (prev + 1) % COLOR_MAP.length);
+        setOpacity(1);
+      }, 500);
+    }, 3000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
   return (
-    <div style={{ backgroundColor: COLORS.RED[0], width: '100vw', height: '100vh' }}>
+    <div
+      style={{
+        backgroundColor: COLOR_MAP[colorIndex][0],
+        transition: 'all 0.5s',
+        width: '100vw',
+        height: '100vh',
+      }}
+    >
       <BlurryGradient
-        colors={[...COLORS.RED, ...COLORS.GREEN]}
-        itemNumber={10}
-        // items={ITEMS}
+        colors={COLOR_MAP[colorIndex]}
+        style={{ opacity: opacity, transition: 'all 0.5s' }}
       />
+      <div className='title'>REACT BLURRY GRADIENT</div>
     </div>
   );
 };

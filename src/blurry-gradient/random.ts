@@ -1,9 +1,7 @@
-/** 指定范围内生成整数 */
 export const random = (min: number, max: number) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-/** 从指定数组中取出指定数量的元素 */
 export const randomArray = <T>(arr: T[], count: number) => {
   const result: T[] = [];
   for (let i = 0; i < count; i++) {

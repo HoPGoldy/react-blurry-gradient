@@ -15,6 +15,7 @@ export interface BlurryGradientProps {
   /**
    * The amount of blur to apply to the gradient items.
    * Accepts any valid CSS filter blur value (e.g., '10px', '2em').
+   * @default '100px'
    */
   blur?: string;
 

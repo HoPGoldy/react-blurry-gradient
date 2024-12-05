@@ -1,12 +1,11 @@
 .blurry-gradient-container {
-  --blur: 150px;
+  --blur: 100px;
 
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%;
   filter: blur(var(--blur));
-  transition: all 0.5s;
 }
 
 @keyframes gradient-move {
