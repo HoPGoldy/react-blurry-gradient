@@ -1,0 +1,31 @@
+.blurry-gradient-container {
+  --blur: 150px;
+
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  filter: blur(var(--blur));
+  transition: all 0.5s;
+}
+
+@keyframes gradient-move {
+  0% {
+    transform: var(--transform-from);
+  }
+
+  100% {
+    transform: var(--transform-to);
+  }
+}
+
+.blurry-gradient-block {
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  background-image: var(--color);
+  animation: gradient-move var(--speed) cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+  border-radius: var(--border-radius);
+  width: var(--width);
+  height: var(--height);
+}
