@@ -1,5 +1,11 @@
 # react-blurry-gradient
 
+![NPM Version](https://img.shields.io/npm/v/react-blurry-gradient)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-blurry-gradient)
+![NPM License](https://img.shields.io/npm/l/react-blurry-gradient)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/HoPGoldy/react-blurry-gradient/release.yml)
+![Static Badge](https://img.shields.io/badge/with-typescript-blue)
+
 ![](./assert/banner.gif)
 
 实现动态毛玻璃渐变背景特效的 React 组件。
@@ -41,6 +47,8 @@ export default function App() {
 | itemNumber | `number`                                                                                                                      | 否   | `10`    | 渐变色块的数量                                                |
 
 ### 2. 随机范围配置
+
+无论使用 `colors` 还是 `items` 配置，都可以使用以下参数来随机生成那些没有指定的属性。
 
 | 参数           | 类型               | 必填 | 默认值     | 说明                                 |
 | -------------- | ------------------ | ---- | ---------- | ------------------------------------ |

@@ -84,7 +84,7 @@ export const BlurryGradient: FC<BlurryGradientProps> = (props) => {
 
   return (
     <div
-      className={`${props.className} blurry-gradient-container`}
+      className={['blurry-gradient-container', props.className].filter(Boolean).join(' ')}
       style={
         {
           ...(props.style || {}),
