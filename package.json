@@ -2,7 +2,7 @@
   "name": "react-blurry-gradient",
   "description": "A React component that creates blurry gradient effect.",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/HoPGoldy/react-blurry-gradient",
   "repository": {
     "type": "git",
